@@ -14,9 +14,7 @@ export class SearchRecipeComponent implements OnInit {
   constructor(private recipesService: RecipesService, private route: ActivatedRoute, private router: Router) { }
 
   sub: any;
-
   query = 'chicken';
-
   recipes:any;
 
   ngOnInit(): void {
@@ -26,19 +24,13 @@ export class SearchRecipeComponent implements OnInit {
     .subscribe(params => {
       this.query = params['q'] || '';
       this.recipes=this.recipesService.getRecipes(this.query);
-      //this.recipes = this.fetchRecipes(this.query);
     });
 
   }
 
-
   onSubmit(){
 
     this.router.navigate(['/search'], { queryParams: { q: this.query }});
-  }
-
-  fetchRecipes(keyword:string){
-    this.recipes=this.recipesService.getRecipes(keyword);
   }
 
   ngOnDestroy() {

@@ -8,7 +8,8 @@ import { SearchRecipeComponent } from './search-recipe/search-recipe.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent },
-  { path: 'search', component: SearchRecipeComponent }
+  { path: 'search', component: SearchRecipeComponent },
+  { path: '**', component: HomeComponent }
 ];
 
 @NgModule({
