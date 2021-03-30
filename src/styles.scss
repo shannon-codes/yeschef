@@ -25,6 +25,7 @@ a, a:hover, a:visited {
 .cards{
   display: grid;
   gap: 1rem;
+  margin:1rem;
   @media (min-width:59em){
     grid-template-columns: repeat(2, 1fr);
   }
@@ -114,10 +115,6 @@ a, a:hover, a:visited {
     line-height: 1.1;
     font-weight:700;
     margin-bottom: 0.75rem;
-  }
-
-  &__sourceName{
-
   }
 
   &__ingredients{
