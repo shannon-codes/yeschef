@@ -1,0 +1,40 @@
+.outer{
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to right, beige, gold);
+  display: grid;
+  place-items: center;
+}
+
+.wrapper{
+  border-radius: 20px;
+  background-color: white;
+  width:90%;
+  display:grid;
+  place-items: center;
+  padding: 30px 10px;
+
+  @media (min-width:50rem){
+    width: 60%;
+  }
+}
+
+.form__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+width: 500px;
+}
+
+@media (min-width:50rem){
+  .form__input{
+    width: 500px;
+  }
+}
+
+
+.form__submit{
+  margin: 10px;
+}
+
